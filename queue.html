@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Song Queue</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Shared styles -->
+    <link rel="stylesheet" href="/css/queue_style.css"> <!-- Queue specific styles -->
+</head>
+<body>
+    <div class="container queue-container">
+        <h1>Live Song Queue</h1>
+        <div class="queue-controls">
+            <button id="refreshQueueButton">Refresh Queue</button>
+            <span>Auto-refresh: <input type="checkbox" id="autoRefreshToggleQueue" checked></span>
+        </div>
+        <div id="queueMessageArea" class="message-area"></div>
+        <h2>Upcoming Songs</h2>
+        <ul id="upcomingSongsList" class="song-list">
+            <!-- Upcoming songs will be populated here -->
+        </ul>
+        <h2>Recently Played</h2>
+        <ul id="playedSongsList" class="song-list">
+            <!-- Played songs will be populated here -->
+        </ul>
+         <p class="request-page-link"><a href="/" target="_blank">Want to request a song? Click here!</a></p>
+    </div>
+    <script src="/js/queue_app.js"></script>
+</body>
+</html>

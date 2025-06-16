@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Shared styles -->
+    <link rel="stylesheet" href="/css/admin_style.css"> <!-- Admin specific styles -->
+</head>
+<body>
+    <div class="container admin-container">
+        <h1>DJ Admin Panel - Song Requests</h1>
+        <div class="admin-controls">
+            <button id="refreshSongsButton">Refresh List</button>
+            <span>Auto-refresh: <input type="checkbox" id="autoRefreshToggle" checked></span>
+        </div>
+        <div id="adminMessageArea" class="message-area"></div>
+        <table id="requestsTable">
+            <thead>
+                <tr>
+                    <th data-sort="timestamp">Time</th>
+                    <th data-sort="name">Name</th>
+                    <th data-sort="songTitle">Song Title</th>
+                    <th data-sort="status">Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Song rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+        <p class="note">Songs are sorted by unplayed first, then by request time (oldest unplayed first).</p>
+         <p><a href="/" target="_blank">Go to Request Page</a> | <a href="/queue" target="_blank">View Public Queue</a></p>
+    </div>
+    <script>
+        // Pass the secret key if needed for JS, though page access is already protected
+        // window.adminSecretKey = "<%= adminSecretKey %>";
+    </script>
+    <script src="/js/admin_app.js"></script>
+</body>
+</html>

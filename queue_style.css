@@ -1,0 +1,42 @@
+.queue-container {
+    max-width: 700px;
+}
+
+.song-list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
+.song-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.song-list li:last-child {
+    border-bottom: none;
+}
+.song-list .song-title {
+    font-weight: bold;
+}
+.song-list .requester-name {
+    font-size: 0.9em;
+    color: #555;
+    margin-left: 10px;
+}
+.song-list .status-played {
+    font-style: italic;
+    color: #28a745; /* Green for played */
+}
+.song-list .status-upcoming {
+    color: #007bff; /* Blue for upcoming */
+}
+
+#playedSongsList li {
+    background-color: #f9f9f9;
+    opacity: 0.7;
+}
+#playedSongsList .song-title {
+    text-decoration: line-through;
+}

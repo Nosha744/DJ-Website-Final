@@ -1,0 +1,23 @@
+.admin-container {
+    max-width: 900px; /* Wider for table */
+}
+
+#requestsTable th[data-sort] {
+    cursor: pointer;
+}
+#requestsTable th[data-sort]:hover {
+    background-color: #0056b3;
+}
+#requestsTable th[data-sort].sorted-asc::after {
+    content: " ▲";
+}
+#requestsTable th[data-sort].sorted-desc::after {
+    content: " ▼";
+}
+
+.note {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 15px;
+    text-align: left;
+}

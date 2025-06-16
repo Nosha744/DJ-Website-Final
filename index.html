@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Song Request</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="djModeLinks" style="text-align: right; margin-bottom: 10px;">
+             <!-- DJ links will be injected here by JS if djmode=true -->
+        </div>
+        <h1>Request a Song</h1>
+        <p class="price-info">Price per request: CHF 1.00</p>
+
+        <div id="requestFormSection">
+            <form id="songRequestForm">
+                <div class="form-group">
+                    <label for="name">Your Name (Optional):</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="songTitle">Song Title (Required):</label>
+                    <input type="text" id="songTitle" name="songTitle" required>
+                </div>
+                <button type="submit" id="payAndRequestButton">Pay CHF 1.00 & Request</button>
+            </form>
+        </div>
+
+        <div id="paymentSection" style="display: none;">
+            <h2>Scan to Pay with TWINT</h2>
+            <p>Please scan the QR code below with your TWINT app to pay CHF 1.00.</p>
+            <div id="qrCodeContainer"></div>
+            <p id="paymentStatus">Waiting for payment...</p>
+            <button id="cancelPaymentButton" style="display: none;">Cancel / New Request</button>
+        </div>
+
+        <div id="confirmationSection" style="display: none;">
+            <h2>Thank You!</h2>
+            <p id="confirmationMessage"></p>
+            <button id="newRequestButton">Make Another Request</button>
+            <p><a href="/queue" target="_blank">View the Live Song Queue</a></p>
+        </div>
+
+        <div id="messageArea" class="message-area"></div>
+         <p class="public-queue-link"><a href="/queue" target="_blank">View the Public Song Queue</a></p>
+    </div>
+    <script src="/js/main_app.js"></script>
+</body>
+</html>
